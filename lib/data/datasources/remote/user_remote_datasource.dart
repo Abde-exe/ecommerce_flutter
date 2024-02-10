@@ -34,7 +34,7 @@ class UserRemoteDatasourceImpl implements UserRemoteDatasource {
     if (response.statusCode == 200) {
       return authenticationResponseModelFromJson(response.body);
     }
-    else if (response.statusCode == 400 || response.statusCode == 401) {
+    else if (response.statusCode == 400 ||  response.statusCode == 401) {
       throw CredentialsFailure();
     }
     else {
