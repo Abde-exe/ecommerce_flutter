@@ -7,3 +7,5 @@ class SignInUser extends UserEvent{
   final SignInParams params;
   SignInUser(this.params);
 }
+
+class CheckUser extends UserEvent{}
