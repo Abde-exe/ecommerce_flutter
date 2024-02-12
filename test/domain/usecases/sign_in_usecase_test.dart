@@ -9,7 +9,7 @@ import 'package:mockito/mockito.dart';
 
 import 'user_repository.mocks.dart';
 
-@GenerateNiceMocks([MockSpec<UserRepository>()])
+
 void main() {
   late SignInUseCase usecase;
   late MockUserRepository mockRepository;

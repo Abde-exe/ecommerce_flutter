@@ -53,6 +53,7 @@ class UserRemoteDatasourceImpl implements UserRemoteDatasource {
           'password': params.password
         })
     );
+
     if (response.statusCode == 200) {
       return authenticationResponseModelFromJson(response.body);
     }

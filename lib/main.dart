@@ -15,22 +15,19 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return BlocProvider(create: (context)=> di.sl<UserBloc>()..add(CheckUser()),child: const MaterialApp(
+    return BlocProvider(create: (context)=> di.sl<UserBloc>()..add(CheckUser()),
+      child: const MaterialApp(
       title: "title",
+      initialRoute: AppRouter.home,
+      onGenerateRoute: AppRouter.onGenerateRoute,
     ),);
   }
 }
 
-class MyHomePage extends StatefulWidget {
-  const MyHomePage({super.key, required this.title});
 
-  final String title;
 
-  @override
-  State<MyHomePage> createState() => _MyHomePageState();
-}
 
-class _MyHomePageState extends State<MyHomePage> {
+/*
 
   @override
   Widget build(BuildContext context) {
@@ -80,3 +77,4 @@ class _MyHomePageState extends State<MyHomePage> {
     );
     }
 }
+*/
